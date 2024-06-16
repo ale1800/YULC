@@ -4,4 +4,4 @@
 
 
 
-WS2812 Led controller using PD to provide more power at 5V
+Led strip controller using PD to provide more power at 5V or an external barrel jack power supply
