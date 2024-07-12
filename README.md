@@ -1,5 +1,7 @@
 # YULC (Yes, a USB-C Led Controller)
 
+## On [Crowd Supply](https://www.crowdsupply.com/aaelectronics/yulc)
+
 ![yulc](https://github.com/ale1800/YULC/assets/53172176/b7f9087c-cb34-41fb-9961-a1b0314f90dd)
 **YULC** is your perfect mate for powering your lightings. Thanks to its compact form factor, it can be placed almost everywhere, it features a lot of protections to **ensure safety for both the charger and the strips**, and in the meanwhile, **can provide a lot of juice to feed very power-hungry lights setup.** 
 It also boasts an handy **built-in buck regulator** that from a maximum of 24V ensures safe 5V or 12V to your output. This mean that is also possible to use 18,19,...,24V external power supply (USB-C or barrel jack) taking advantage of their higher total power output and converting them to 5V or 12V increasing the output current.
