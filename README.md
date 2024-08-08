@@ -48,7 +48,7 @@ Powering all the logic and the ESP32-S3 with a dedicated secondary power stage w
 **Dedicated power MOSFETs (one for channel) eliminate the need for external relays**, to physically turn on and off the strips saving a considerable amount of power for long ones. 
 These allow for a direct control and also smooth dimming via PWM for simpler strips.
 
-[![PXL_20240702_170940775]([https://github.com/ale1800/ESP32-board/assets/53172176/34b24297-1c93-43cd-b487-1ca270770319) ](https://github.com/ale1800/YULC/blob/main/images/real_use/top_yulc.jpg](https://github.com/ale1800/YULC/blob/main/images/real_use/top_yulc.jpg))
+[top_yulc](https://github.com/ale1800/YULC/blob/main/images/real_use/top_yulc.jpg)
 
 https://github.com/ale1800/ESP32-board/assets/53172176/a9922877-4f54-4cd5-a90a-000a9c27c625
 
