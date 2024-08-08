@@ -34,7 +34,7 @@ Here you can have a look to how the power path works:
 
 
 
-[![Concept map (6)](https://github.com/ale1800/ESP32-board/assets/53172176/7c49a46b-c15e-45c9-bb84-2c160c00b566)](https://github.com/ale1800/YULC/blob/main/images/Concept%20map.png)
+[Concept map (6)](https://github.com/ale1800/ESP32-board/assets/53172176/7c49a46b-c15e-45c9-bb84-2c160c00b566)
 
 Powering all the logic and the ESP32-S3 with a dedicated secondary power stage without relying on the main one ensures that in case of a blowing fuse, everyhitng will still work as expected. So replacing the fuse on-the-fly will be the only thing you'll need to be again ready to go.
 
