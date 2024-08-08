@@ -2,7 +2,7 @@
 
 ## If you want to stay tuned, this is YULC on [Crowd Supply](https://www.crowdsupply.com/aaelectronics/yulc)
 
-![yulc](https://github.com/ale1800/YULC/assets/53172176/b7f9087c-cb34-41fb-9961-a1b0314f90dd)
+![yulc](https://github.com/ale1800/YULC/blob/main/images/yulc.jpg)
 **YULC** is your perfect mate for powering your lightings at 5, 12 or 24V. Thanks to its compact form factor (a 3D printable case is coming), it can be placed almost everywhere, it features a lot of protections to **ensure safety for both the charger and the strips**, and in the meanwhile, **can provide a lot of juice to feed very power-hungry lights setup.** 
 It also boasts an handy **built-in buck regulator** that from a maximum of 24V ensures safe 5V or 12V to your output. This mean that is also possible to use 18,19,...,24V external power supply (USB-C or barrel jack) taking advantage of their higher total power output and converting them to 5V or 12V increasing the output current.
 Furthermore, on the back of the board there is a **powerful ESP32-S3, directly programmable from the USB-C**, that allows you to manage even more complex effects and to run heavy tasks.  
@@ -34,7 +34,7 @@ Here you can have a look to how the power path works:
 
 
 
-[Concept map (6)](https://github.com/ale1800/ESP32-board/assets/53172176/7c49a46b-c15e-45c9-bb84-2c160c00b566)
+![Concept map (6)](https://github.com/ale1800/YULC/blob/main/images/Concept%20map.png)
 
 Powering all the logic and the ESP32-S3 with a dedicated secondary power stage without relying on the main one ensures that in case of a blowing fuse, everyhitng will still work as expected. So replacing the fuse on-the-fly will be the only thing you'll need to be again ready to go.
 
@@ -48,12 +48,7 @@ Powering all the logic and the ESP32-S3 with a dedicated secondary power stage w
 **Dedicated power MOSFETs (one for channel) eliminate the need for external relays**, to physically turn on and off the strips saving a considerable amount of power for long ones. 
 These allow for a direct control and also smooth dimming via PWM for simpler strips.
 
-[top_yulc](https://github.com/ale1800/YULC/blob/main/images/real_use/top_yulc.jpg)
-
-https://github.com/ale1800/ESP32-board/assets/53172176/a9922877-4f54-4cd5-a90a-000a9c27c625
-
-
-
+![top_yulc](https://github.com/ale1800/YULC/blob/main/images/real_use/top_yulc.jpg)
 
 
 
