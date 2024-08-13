@@ -2,6 +2,7 @@
 
 ## If you want to stay tuned, this is YULC on [Crowd Supply](https://www.crowdsupply.com/aaelectronics/yulc)
 
+YULC on [Discord](https://discord.com/invite/ByGBf97C)
 ![yulc](https://github.com/ale1800/YULC/blob/main/images/yulc.jpg)
 **YULC** is your perfect mate for powering your lightings at 5, 12 or 24V. Thanks to its compact form factor (a 3D printable case is coming), it can be placed almost everywhere, it features a lot of protections to **ensure safety for both the charger and the strips**, and in the meanwhile, **can provide a lot of juice to feed very power-hungry lights setup.** 
 It also boasts an handy **built-in buck regulator** that from a maximum of 24V ensures safe 5V or 12V to your output. This mean that is also possible to use 18,19,...,24V external power supply (USB-C or barrel jack) taking advantage of their higher total power output and converting them to 5V or 12V increasing the output current.
