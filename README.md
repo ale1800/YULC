@@ -1,5 +1,5 @@
-![Static Badge](https://img.shields.io/badge/Crowd_Supply-brightgreen?link=https%3A%2F%2Fwww.crowdsupply.com%2Faaelectronics%2Fyulc)
-![Discord](https://img.shields.io/discord/1095642960365879306?label=Discord&link=https%3A%2F%2Fdiscord.com%2Finvite%2FByGBf97C)
+[![Static Badge](https://img.shields.io/badge/Crowd_Supply-brightgreen?link=https%3A%2F%2Fwww.crowdsupply.com%2Faaelectronics%2Fyulc)](https://www.crowdsupply.com/aaelectronics/yulc)
+[![Discord](https://img.shields.io/discord/1095642960365879306?label=Discord&link=https%3A%2F%2Fdiscord.com%2Finvite%2FByGBf97C)](https://discord.com/invite/ByGBf97C)
 
 
 
