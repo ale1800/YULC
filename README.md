@@ -1,5 +1,6 @@
 ![Static Badge](https://img.shields.io/badge/Crowd_Supply-brightgreen?link=https%3A%2F%2Fwww.crowdsupply.com%2Faaelectronics%2Fyulc)
-![Static Badge](https://img.shields.io/badge/AAElectronics-lightblue?label=Discord&link=https%3A%2F%2Fdiscord.com%2Finvite%2FByGBf97C)
+![Discord](https://img.shields.io/discord/1095642960365879306?label=Discord)
+
 
 
 # YULC (Yes, a USB-C Led Controller)
