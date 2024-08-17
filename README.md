@@ -33,6 +33,7 @@ As before, you can choose to buck the voltage to 12 or 5V or use it directly.
 **When selecting "USB", do not also connect the barrel jack!**.
    
 3) USB-C PD Voltage selection. **Note that these voltages are the one you are asking to the charger, not the ones you surely have on the board.** Selecting 20V, if the charger can provide them, the negotiation will end successfully, mosfets will let current flow and everything will be powered on. But if the charger is not able to do that, the negotiation will fail and the board will stay off. To help you debug that, the leds "OK" or "BAD" will lights up according to the negotiation result. Pay attention to what chargers you want to use. It should have a label with the list of voltages it can provide, so be sure to ask for that supported voltages, otherwise the negotiation will fail. Also consider the amount of power you need for your led strips and the power the charger can spit out.
+**Chargers with the USB-A output will not work, even selecting 5V on YULC. Only Type-C Power Delivery chargers are compatible**
 > [!IMPORTANT]  
 Eg. If you have 5V strips like WS2812b and you want 6A at the output (so 30W), **be sure to ask the for a voltage/current combo the charger can offer that can give those 30W and the buck it to 5V through the converter to have than current you want at the output.**
 
@@ -87,10 +88,10 @@ Each channel is equipped with a level shifer to its data output and a power mosf
 
   ## YULC'S FISRT CONFIGURATION
 
-  According to your typè of setup, you'll want to set YULC and strips to be powered in the the best way possibile.
+  According to your type of setup, you'll want to set YULC and strips to be powered in the the best way possibile.
   Follow this steps to determine all the jumpers selection you need:
   
-![Settings_flow](https://github.com/ale1800/YULC/blob/main/images/power.png)
+![Settings_flow](https://github.com/ale1800/YULC/blob/main/images/Jumper%20settings.png)
 
 > [!WARNING]  
 **Be sure to power YULC only after you've set everything up, do not change PD and buck output voltages on the fly, neither the first jumper**
