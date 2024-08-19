@@ -96,3 +96,4 @@ Each channel is equipped with a level shifer to its data output and a power mosf
 > [!WARNING]  
 **Be sure to power YULC only after you've set everything up, do not change PD and buck output voltages on the fly, neither the first jumper**
 
+(WIP)
