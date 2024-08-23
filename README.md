@@ -3,7 +3,7 @@
 
 # YULC (Yes, a USB-C Led Controller)
 
-If you like this project and you'd want to stay in the loop with its development, please take a moment to fill out [this form](https://forms.gle/YGpFwVQem52SGWBh7). Your feedback means a lot to me!
+If you like this project and you'd want to stay in the loop with its development, please take a moment to fill out [this form](https://forms.gle/YGpFwVQem52SGWBh7), in order to also let you know when it will be available. Your feedback means a lot to me!
 
 ![yulc](https://github.com/ale1800/YULC/blob/main/images/yulc.jpg)
 **YULC** is your perfect mate for powering your lightings at 5, 12 or 24V. Thanks to its compact form factor (a 3D printable case is coming), it can be placed almost everywhere, it features a lot of protections to **ensure safety for both the charger and the strips**, and in the meanwhile, **can provide a lot of juice to feed very power-hungry lights setup.** 
