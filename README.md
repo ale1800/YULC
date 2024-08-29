@@ -37,6 +37,9 @@ As before, you can choose to buck the voltage to 12 or 5V or use it directly.
 > [!IMPORTANT]  
 Eg. If you have 5V strips like WS2812b and you want 6A at the output (so 30W), **be sure to ask the for a voltage/current combo the charger can offer that can give those 30W and than buck it to 5V through the converter to have the current you want at the output.**
 
+> [!IMPORTANT]  
+Be sure to select the closest combination of power and input voltage to what you need. If you need the buck IC to regulate at 5V, an input voltage of 9V or 12V will be better than a 24V from the heating point of view. The voltage difference (Vin - Vout) is smaller, so the inductor is "less stressed" -> less ripple current -> less heat. So you need the best trade-off with a quite close input voltage and enough power for your application.
+
 3) This is the buck converter output regulation. Populate horizontally the pairs of pins according to the voltage you want to have at the output. If your input is lower or same as the output, just do not use the buck converter and route it directly but keep it populated even if you don't use it. The buck IC will automatically enter in an energy save mode when the load is really small or even is not present.
 **The same voltage will be shared across the two channels**
 You can source up to 20A from the IC.
