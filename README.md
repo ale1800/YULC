@@ -2,7 +2,7 @@
 
 # YULC (Yes, a USB-C Led Controller)
 
-## Current rev: [2.1](https://github.com/ale1800/YULC/edit/main/HW_VERSIONS.md)
+## Current rev: [2.1](https://github.com/ale1800/YULC/blob/main/HW_VERSIONS.md)
 
 ## Soon available [here](https://aaelectronics-shop.com/)!
 
