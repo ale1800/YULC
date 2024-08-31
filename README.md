@@ -2,6 +2,8 @@
 
 # YULC (Yes, a USB-C Led Controller)
 
+## Now at rev 2.1
+
 ## Soon available [here](https://aaelectronics-shop.com/)!
 
 
