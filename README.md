@@ -88,9 +88,22 @@ Each channel is equipped with a level shifer to its data output and a high side 
   | GPIO 47 (DO) | Mosfet 2 |
   | GPIO 7 (AI) | Fuse sense |
 
+## ENCLOSURES
 
+This board does not have a "full closed" enclosure, because it needs a lot of air flow while stressing it with a lot of output current. So actually the "enclosure" will consists in two pieces: a simple flat base to screw to YULC with 3 M2 screws and the fan holder, that will be connected through one of the screws
+
+<p>
+<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/side-3.jpg">
+<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/front-1.jpg">
+<img src="https://github.com/ale1800/YULC/blob/main/images/enclosure/case-3.jpg">
+<img src="https://github.com/ale1800/YULC/blob/main/images/enclosure/case-5.jpg">
+</p>
+
+> [!WARNING]  
+You can print the fan holder in PLA, but for output power >40/50W, I heavily suggest to switch to ABS due to the high temperatures of the component, otherwise the fan holder can deform bending the plastic
 
   ## YULC'S FISRT CONFIGURATION
+
 
   According to your type of setup, you'll want to set YULC and strips to be powered in the the best way possibile.
   Follow this steps to determine all the jumpers selection you need:
