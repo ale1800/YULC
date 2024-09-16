@@ -122,3 +122,7 @@ The base has two more holes for M2 screws that can be used to design other types
 **Be sure to power YULC only after you've set everything up, do not change PD and buck output voltages on the fly, neither the first jumper**
 
 (WIP)
+
+
+## License
+![License](https://github.com/ale1800/YULC/blob/main/images/license.jpg)
