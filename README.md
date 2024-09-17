@@ -109,11 +109,13 @@ Follow this steps to determine all the jumpers selection you need according to h
 ### WLED
 Wled for YULC is a manually compiled build, based on the **v0.15.0-b5 "Kosen"**. It features 2 usermods: [Audio Reactive](https://kno.wled.ge/advanced/audio-reactive/) and [MultiRelay](https://mm.kno.wled.ge/usermods/MultiRelay/).
 
-<p>
-<img src="https://github.com/ale1800/YULC/blob/main/images/Wled/recap_usermod.jpg" width="300"> 
-</p>
+<center>
+   <p>
+      <img src="https://github.com/ale1800/YULC/blob/main/images/Wled/recap_usermod.jpg" width="300"> 
+   </p>
+</center>
 
- **AUDIO REACTIVE**
+**AUDIO REACTIVE**
  
 Thanks to the powerful ESP32-S3, you can really take adavantage of this integration while driving complex effects on really long strip. Yuo have multiple pins on the exposed header that you can use to read an I2S microphone.
 
@@ -124,17 +126,18 @@ This is valid if you want to connect two addressable strips, but, for example, i
 YULC offers a great versatility from this point of view.
 
 So, to configure two digital strip go to **Config -> LED Preferences** and set everything up like the following picture with your own strips type and lengths. Also check **"Make a segment for each output"**
-
+<center>
 <p>
 <img src="https://github.com/ale1800/YULC/blob/main/images/Wled/2_strips_settings.jpg" width="300"> 
 </p>
+</center>
 
 Now go back **to Config -> Usermods** and, again, follow the picture, then save. This usermod has 4 pre-defined relays, but you only need the first two. **Pin 47 is linked to Channel 1** (DATA 1 on the PCB) and pin **21 to Channel 2**. Check also **"External"** on both, so we can control these relays through the dedicated APIs.
-
+<center>
 <p>
 <img src="https://github.com/ale1800/YULC/blob/main/images/Wled/relay_pins.jpg" width="300"> 
 </p>
-
+</center>
 At this point we can physically toggle both segments through built-in mosfets combining both WLED and Multi Relay JSON API. Keep in mind that the WLED main button will still turn off all the segments at once.
 The calls you need are:
 
