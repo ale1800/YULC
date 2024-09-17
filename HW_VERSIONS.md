@@ -1,8 +1,10 @@
 ## YULC v1.0
+<center>
 <p>
-<img src="https://github.com/ale1800/YULC/blob/main/images/v1.0/front_v1.0.jpg" alt="accessibility text">
-<img src="https://github.com/ale1800/YULC/blob/main/images/v1.0/back_v1.0.jpg" alt="accessibility text">
+<img src="https://github.com/ale1800/YULC/blob/main/images/v1.0/front_v1.0.jpg" alt="accessibility text" width="500">
+<img src="https://github.com/ale1800/YULC/blob/main/images/v1.0/back_v1.0.jpg" alt="accessibility text" width="500">
 </p>
+</center>
 This first version consists in a single channel 5V Led controller.
 
 It uses the STUSB4500 IC from ST to handle the PD delivery. This module must is configured by the ESP32 using I2C protocol through which is set the voltage the IC should ask for to the chargers.
@@ -13,11 +15,11 @@ The microncontroller is an ESP32-WROOM-32E and using an CP2102 it can be program
 There should also be a mosfet to turn off the strips but the footprint was the wrong one, so that does not work.
 
 ## YULC v2.0
-
-<p>
-<img src="https://github.com/ale1800/YULC/blob/main/images/White-bg-images/yulc-front-back-01.jpeg" >
-</p>
-
+<center>
+  <p>
+    <img src="https://github.com/ale1800/YULC/blob/main/images/White-bg-images/yulc-front-back-01.jpeg" >
+  </p>
+</center>
 This version comes with a lot of upgrades compared to the v1.0:
 
 - 2 Channels
@@ -32,10 +34,11 @@ This version comes with a lot of upgrades compared to the v1.0:
 Everything works correctly excepts for the mosfets. THey switch the negative terminal and, while it's working for analog strips, it does not work for the dgital ones. The current must find another path to GND, making mosfets useless
 
 ## YULC v2.1
-
-<p>
-<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/front-2.jpg" >
-</p>
+<center>
+  <p>
+    <img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/front-2.jpg" width="700">
+  </p>
+</center>
 
 In this version I fixed some small things. Compared to v2.0, the two mosfets are now on the top layer, to be able to put the heatsink on both. I also re-arranged the two P-Mosfets on the USB-C Power bus, to allow a better routing for the input capacitors of the main buck converter. Now they are much closer, leading to a better overall behaviour of the IC.
 
