@@ -122,6 +122,10 @@ Follow this steps to determine all the jumpers selection you need:
 ### WLED
 Wled for YULC is a manually compiled build, based on the v0.15.0-b5 "Kosen". It features 2 usermods: Sound Reactive and Multi Relay.
 
+<p>
+<img src="https://github.com/ale1800/YULC/blob/main/images/Wled/recap_usermod.jpg" width="600"> 
+</p>
+
  **SOUND REACTIVE**
  
 Thanks to the powerful ESP32-S3, you can really take adavantage of this integration while driving complex effects on really long strip. Yuo have multiple pins on the exposed header that you can use to read an I2S microphone.
