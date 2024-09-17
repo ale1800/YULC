@@ -93,10 +93,7 @@ Each channel is equipped with a level shifer to its data output and a high side 
 This board does not have a "full closed" enclosure, because it needs a lot of air flow while stressing it with a lot of output current. So actually the "enclosure" will consists in two pieces: a simple flat base to screw to YULC with 3 M2 screws and the fan holder, that will be connected through one of the screws
 
 <p>
-<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/side-3.jpg">
-<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/front-1.jpg">
-<img src="https://github.com/ale1800/YULC/blob/main/images/enclosure/case-3.jpg">
-<img src="https://github.com/ale1800/YULC/blob/main/images/enclosure/case-5.jpg">
+<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/side-3.jpg" width="600">
 </p>
 
 > [!WARNING]  
@@ -105,24 +102,37 @@ You can print the fan holder in PLA, but for output power >40/50W, I heavily sug
 
 The base has two more holes for M2 screws that can be used to design other types of support, like a din-mounting bracket, taken from [thingiverse](https://www.thingiverse.com/thing:2613804) and modified a bit.
 <p>
-<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/base_screw.jpg">
-<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/din-combined.jpg" > 
-<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/DIN-side.jpg">
+<img src="https://github.com/ale1800/YULC/blob/main/images/v2.1/din-combined.jpg" width="600"> 
 </p>
 
-  ## YULC'S FISRT CONFIGURATION
+## YULC'S FISRT CONFIGURATION
 
-
-  According to your type of setup, you'll want to set YULC and strips to be powered in the the best way possibile.
-  Follow this steps to determine all the jumpers selection you need:
+According to your type of setup, you'll want to set YULC and strips to be powered in the the best way possibile.
+Follow this steps to determine all the jumpers selection you need:
   
 ![Settings_flow](https://github.com/ale1800/YULC/blob/main/images/Jumper%20settings.png)
+
 
 > [!WARNING]  
 **Be sure to power YULC only after you've set everything up, do not change PD and buck output voltages on the fly, neither the first jumper**
 
-(WIP)
+### SOFTWARE
+- **YULC with [WLED](#wled)**
 
+### WLED
+Wled for YULC is a manually compiled build, based on the v0.15.0-b5 "Kosen". It features 2 usermods: Sound Reactive and Multi Relay.
+
+ **SOUND REACTIVE**
+ 
+Thanks to the powerful ESP32-S3, you can really take adavantage of this integration while driving complex effects on really long strip. Yuo have multiple pins on the exposed header that you can use to read an I2S microphone.
+
+**MULTI RELAY**
+
+Natively WLED only support one pin (usually connected to a relay) to physically turn on and off the light strips. While you can always use one of the exposed pins to wire an external relay, the built-in hardware already allows you to drive the two channels independently and each with its own power mosfet to toggle the strips. And thanks to this usermod, you can fully take advantage of it.
+This is valid if you want to connect two addressable strips, but, for example, if you want to connect one digital strip and an anlog one, WLED already manage this without any external software. You would only need to set one mosfet as the main relay, and the other one as a PWM driving signal.
+YULC offers a great versatility from this point of view.
+
+So, to configure 2 digital strip
 
 ## License
 ![License](https://github.com/ale1800/YULC/blob/main/images/license.jpg)
