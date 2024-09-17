@@ -136,7 +136,11 @@ Natively WLED only support one pin (usually connected to a relay) to physically 
 This is valid if you want to connect two addressable strips, but, for example, if you want to connect one digital strip and an anlog one, WLED already manage this without any external software. You would only need to set one mosfet as the main relay, and the other one as a PWM driving signal.
 YULC offers a great versatility from this point of view.
 
-So, to configure 2 digital strip
+So, to configure 2 digital strip go to Config -> LED Preferences and set everything up like the following picture. 
+
+<p>
+<img src="https://github.com/ale1800/YULC/blob/main/images/Wled/2_strips_settings.jpg" width="300"> 
+</p>
 
 ## License
 ![License](https://github.com/ale1800/YULC/blob/main/images/license.jpg)
