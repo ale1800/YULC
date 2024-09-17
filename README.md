@@ -108,7 +108,7 @@ The base has two more holes for M2 screws that can be used to design other types
 ## YULC'S FISRT CONFIGURATION
 
 According to your type of setup, you'll want to set YULC and strips to be powered in the the best way possibile.
-Follow this steps to determine all the jumpers selection you need according to how [they works](yulc-s-settings-explanation):
+Follow this steps to determine all the jumpers selection you need according to how [they works](yulc-settings-explanation):
   
 ![Settings_flow](https://github.com/ale1800/YULC/blob/main/images/Jumper%20settings.png)
 
