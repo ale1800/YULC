@@ -152,7 +152,7 @@ curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":true}
 When switching on you'll want to physically turn on the strip before turning on via software. Instead, when switching off, it would be better to reverse the sequence.
 Basically there should not be data signals to led strips while they are physically disconnected from the power supply.
 
-If you are an Home Assistant user, you can easily integrate these controls with a simple switch and some shell commands:
+If you are an Home Assistant user, you can easily integrate these controls as **light** entities using some shell commands:
 
 ```yaml
 shell_command:
@@ -165,9 +165,9 @@ shell_command:
   strip_2_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":1,"on":false}]}'' "http://your-ip-address/json/state"'
   strip_2_mos_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":1,"on":false}}'' "http://your-ip-address/json"'
     
-switch:
+light:
   - platform: template
-    switches:
+    lights:
       strip_1:
         turn_on:
           - service: shell_command.strip_1_mos_on
@@ -175,8 +175,6 @@ switch:
         turn_off:
           - service: shell_command.strip_1_off
           - service: shell_command.strip_1_mos_off
-  - platform: template
-    switches:
       strip_2:
         turn_on:
           - service: shell_command.strip_2_mos_on
@@ -187,6 +185,12 @@ switch:
 ```
 
 Now you have two completely separated strips from every point of view.
+
+<center>
+   <p>
+      <img src="https://github.com/ale1800/YULC/blob/main/images/Wled/HA-yulc.PNG"> 
+   </p>
+</center>
 
 ## License
 ![License](https://github.com/ale1800/YULC/blob/main/images/license.jpg)
