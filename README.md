@@ -136,11 +136,67 @@ Natively WLED only support one pin (usually connected to a relay) to physically 
 This is valid if you want to connect two addressable strips, but, for example, if you want to connect one digital strip and an anlog one, WLED already manage this without any external software. You would only need to set one mosfet as the main relay, and the other one as a PWM driving signal.
 YULC offers a great versatility from this point of view.
 
-So, to configure 2 digital strip go to Config -> LED Preferences and set everything up like the following picture. 
+So, to configure 2 digital strip go to **Config -> LED Preferences** and set everything up like the following picture with your own strips type and length. Also check **"Make a segment for each output"**
 
 <p>
 <img src="https://github.com/ale1800/YULC/blob/main/images/Wled/2_strips_settings.jpg" width="300"> 
 </p>
+
+Now go back **to Config -> Usermods** and, again, follow the picture, then save. This usermod has 4 pre-defined relay, but you only need these 2. Pin 47 is linked to Channel 1 (DATA 1 on the PCB) and pin 21 to Channel 2. Check also "External" on both, so we can control these relays through the dedicated.
+
+<p>
+<img src="https://github.com/ale1800/YULC/blob/main/images/Wled/relay_pins.jpg" width="300"> 
+</p>
+
+At this point we can physically toggle both segments through built-in mosfets combining both WLED and Multi Relay JSON API. Keeo in mind that the WLED main button will still turn off all the segments at once.
+The calls you need are:
+
+```yaml
+//Switching on the mosfet #0 to power the first segment/strip
+curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":0,"on":true}}'' "http://your-ip-address/json"
+
+//Turning on "software" the segment with ID #0
+curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":true}]}'' "http://your-ip-address/json/state" 
+
+```
+When switching on you'll want to physically turn on the strip before turning on via software. Instead, when switching off, it would be better to reverse the sequence.
+Basically there should not be data signals to led strips while they are physically disconnected from the power supply.
+
+If you are an Home Assistant user, you can easily integrate these controls with a simple switch and some shell commands. In this case my device has 192.168.1.40 as IP, you'll need to write down yours
+
+```yaml
+shell_command:
+  strip_1_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":true}]}'' "http://192.168.1.40/json/state"'
+  strip_1_mos_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":0,"on":true}}'' "http://192.168.1.40/json"'
+  strip_1_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":false}]}'' "http://192.168.1.40/json/state"'
+  strip_1_mos_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":0,"on":false}}'' "http://192.168.1.40/json"'
+  strip_2_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":1,"on":true}]}'' "http://192.168.1.40/json/state"'
+  strip_2_mos_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":1,"on":true}}'' "http://192.168.1.40/json"'
+  strip_2_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":1,"on":false}]}'' "http://192.168.1.40/json/state"'
+  strip_2_mos_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":1,"on":false}}'' "http://192.168.1.40/json"'
+    
+switch:
+  - platform: template
+    switches:
+      strip_1:
+        turn_on:
+          - service: shell_command.strip_1_mos_on
+          - service: shell_command.strip_1_on
+        turn_off:
+          - service: shell_command.strip_1_off
+          - service: shell_command.strip_1_mos_off
+  - platform: template
+    switches:
+      strip_2:
+        turn_on:
+          - service: shell_command.strip_2_mos_on
+          - service: shell_command.strip_2_on
+        turn_off:
+          - service: shell_command.strip_2_off
+          - service: shell_command.strip_2_mos_off
+```
+
+Now you have two completely separated strips from every point of view.
 
 ## License
 ![License](https://github.com/ale1800/YULC/blob/main/images/license.jpg)
