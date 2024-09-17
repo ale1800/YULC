@@ -24,7 +24,7 @@ There are two power stages. The main one for the led stips and one dedicated to 
 
 Powering all the logic and the ESP32-S3 with a dedicated secondary power stage without relying on the main one ensures that in case of a blowing fuse, everyhitng will still work as expected. So replacing the fuse on-the-fly will be the only thing you'll need to be again ready to go.
 
-## YULC'S SETTINGS EXPLANATION
+## YULC SETTINGS EXPLANATION
 
 ![Board](https://github.com/ale1800/YULC/blob/main/images/list.png)
 
@@ -108,7 +108,7 @@ The base has two more holes for M2 screws that can be used to design other types
 ## YULC'S FISRT CONFIGURATION
 
 According to your type of setup, you'll want to set YULC and strips to be powered in the the best way possibile.
-Follow this steps to determine all the jumpers selection you need according to how [they works](#yulc-settings-explanation):
+Follow this steps to determine all the jumpers selection you need according to how [they work](#yulc-settings-explanation):
   
 ![Settings_flow](https://github.com/ale1800/YULC/blob/main/images/Jumper%20settings.png)
 
