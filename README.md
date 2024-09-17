@@ -136,19 +136,19 @@ Natively WLED only support one pin (usually connected to a relay) to physically 
 This is valid if you want to connect two addressable strips, but, for example, if you want to connect one digital strip and an anlog one, WLED already manage this without any external software. You would only need to set one mosfet as the main relay, and the other one as a PWM driving signal.
 YULC offers a great versatility from this point of view.
 
-So, to configure 2 digital strip go to **Config -> LED Preferences** and set everything up like the following picture with your own strips type and length. Also check **"Make a segment for each output"**
+So, to configure two digital strip go to **Config -> LED Preferences** and set everything up like the following picture with your own strips type and lengths. Also check **"Make a segment for each output"**
 
 <p>
 <img src="https://github.com/ale1800/YULC/blob/main/images/Wled/2_strips_settings.jpg" width="300"> 
 </p>
 
-Now go back **to Config -> Usermods** and, again, follow the picture, then save. This usermod has 4 pre-defined relay, but you only need these 2. Pin 47 is linked to Channel 1 (DATA 1 on the PCB) and pin 21 to Channel 2. Check also "External" on both, so we can control these relays through the dedicated.
+Now go back **to Config -> Usermods** and, again, follow the picture, then save. This usermod has 4 pre-defined relays, but you only need the first two. **Pin 47 is linked to Channel 1** (DATA 1 on the PCB) and pin **21 to Channel 2**. Check also **"External"** on both, so we can control these relays through the dedicated APIs.
 
 <p>
 <img src="https://github.com/ale1800/YULC/blob/main/images/Wled/relay_pins.jpg" width="300"> 
 </p>
 
-At this point we can physically toggle both segments through built-in mosfets combining both WLED and Multi Relay JSON API. Keeo in mind that the WLED main button will still turn off all the segments at once.
+At this point we can physically toggle both segments through built-in mosfets combining both WLED and Multi Relay JSON API. Keep in mind that the WLED main button will still turn off all the segments at once.
 The calls you need are:
 
 ```yaml
@@ -162,18 +162,18 @@ curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":true}
 When switching on you'll want to physically turn on the strip before turning on via software. Instead, when switching off, it would be better to reverse the sequence.
 Basically there should not be data signals to led strips while they are physically disconnected from the power supply.
 
-If you are an Home Assistant user, you can easily integrate these controls with a simple switch and some shell commands. In this case my device has 192.168.1.40 as IP, you'll need to write down yours
+If you are an Home Assistant user, you can easily integrate these controls with a simple switch and some shell commands:
 
 ```yaml
 shell_command:
-  strip_1_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":true}]}'' "http://192.168.1.40/json/state"'
-  strip_1_mos_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":0,"on":true}}'' "http://192.168.1.40/json"'
-  strip_1_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":false}]}'' "http://192.168.1.40/json/state"'
-  strip_1_mos_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":0,"on":false}}'' "http://192.168.1.40/json"'
-  strip_2_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":1,"on":true}]}'' "http://192.168.1.40/json/state"'
-  strip_2_mos_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":1,"on":true}}'' "http://192.168.1.40/json"'
-  strip_2_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":1,"on":false}]}'' "http://192.168.1.40/json/state"'
-  strip_2_mos_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":1,"on":false}}'' "http://192.168.1.40/json"'
+  strip_1_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":true}]}'' "http://your-ip-address/json/state"'
+  strip_1_mos_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":0,"on":true}}'' "http://your-ip-address/json"'
+  strip_1_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":0,"on":false}]}'' "http://your-ip-address/json/state"'
+  strip_1_mos_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":0,"on":false}}'' "http://your-ip-address/json"'
+  strip_2_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":1,"on":true}]}'' "http://your-ip-address/json/state"'
+  strip_2_mos_on: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":1,"on":true}}'' "http://your-ip-address/json"'
+  strip_2_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"seg":[{"id":1,"on":false}]}'' "http://your-ip-address/json/state"'
+  strip_2_mos_off: 'curl -X POST -H "Content-Type: application/json" -d ''{"MultiRelay":{"relay":1,"on":false}}'' "http://your-ip-address/json"'
     
 switch:
   - platform: template
