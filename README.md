@@ -104,6 +104,7 @@ Follow this steps to determine all the jumpers selection you need according to h
 
 ### SOFTWARE CONFIGURATION
 - **YULC with [WLED](#wled)**
+- ...
 
 ### WLED
 Wled for YULC is a manually compiled build, based on the **v0.15.0-b5 "Kosen"**. It features 2 usermods: [Audio Reactive](https://kno.wled.ge/advanced/audio-reactive/) and [MultiRelay](https://mm.kno.wled.ge/usermods/MultiRelay/).
