@@ -123,7 +123,7 @@ Follow this steps to determine all the jumpers selection you need:
 Wled for YULC is a manually compiled build, based on the v0.15.0-b5 "Kosen". It features 2 usermods: Sound Reactive and Multi Relay.
 
 <p>
-<img src="https://github.com/ale1800/YULC/blob/main/images/Wled/recap_usermod.jpg" width="600"> 
+<img src="https://github.com/ale1800/YULC/blob/main/images/Wled/recap_usermod.jpg" width="300"> 
 </p>
 
  **SOUND REACTIVE**
