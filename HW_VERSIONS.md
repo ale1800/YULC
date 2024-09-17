@@ -54,12 +54,16 @@ Thanks to this IC, mosfets now works flawlessly for both digital and analog stri
 Now there are more output terminals to reduce the overall resistance of the serie **BUCK IC + POWER INDUCTOR + FUSE + TERMINALS**. With the new inductor and more parallel terminals, the resistance dropped from around 25 mOhm v2.0 to 12/13 mOhm. Testing this new version, with a current of 19A, I have around of 250/300mV drop compared to 400mV of the v2.0. So From 5V to 4.7V instead 4.6V
 
 **For the test, the input voltage is 19V and it's regulated down to 5V through the buck converter.**
-<p>
-<figcaption>Output resistance v2.0</figcaption>
-<img src="https://github.com/ale1800/YULC/blob/main/images/tests/test_v2.0.jpg" >
-</p>
-<p>
-<figcaption>Output resistance v2.1</figcaption>
-<img src="https://github.com/ale1800/YULC/blob/main/images/tests/test_v2.1.jpg" >
-</p>
+<center>
+  <p>
+    <figcaption>Output resistance v2.0</figcaption>
+    <img src="https://github.com/ale1800/YULC/blob/main/images/tests/test_v2.0.jpg" >
+  </p>
+</center>
+<center>
+  <p>
+    <figcaption>Output resistance v2.1</figcaption>
+    <img src="https://github.com/ale1800/YULC/blob/main/images/tests/test_v2.1.jpg" >
+  </p>
+</center>
 
