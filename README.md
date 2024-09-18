@@ -186,11 +186,7 @@ light:
 
 Now you have two completely separated strips from every point of view.
 
-<center>
-   <p>
-      <img src="https://github.com/ale1800/YULC/blob/main/images/Wled/HA-yulc.PNG"> 
-   </p>
-</center>
 
+![ha-wled](https://github.com/ale1800/YULC/blob/main/images/Wled/PXL_20240917_164121899-1.gif)
 ## License
 ![License](https://github.com/ale1800/YULC/blob/main/images/license.jpg)
