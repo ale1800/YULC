@@ -84,8 +84,8 @@ Each channel is equipped with a level shifer to its data output and a high side 
   | GPIO 0 (DO) | Boot/User Button |
   |  GPIO 1 (DO) | Led Data 1 |
   |  GPIO 2 (DO) | Led Data 2 |
-  |  GPIO 21 (DO) | Mosfet 1 |
-  | GPIO 47 (DO) | Mosfet 2 |
+  |  GPIO 47 (DO) | Mosfet 1 |
+  | GPIO 21 (DO) | Mosfet 2 |
   | GPIO 7 (AI) | Fuse sense |
 
 
