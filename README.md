@@ -99,7 +99,7 @@ Follow this steps to determine all the jumpers selection you need according to h
 > [!WARNING]  
 **Be sure to power YULC only after you've set everything up, do not change PD and buck output voltages on the fly, neither the first jumper**
 
-**Only after you are done with jumpers selection you can mount the [3D printed enclosure](https://github.com/ale1800/YULC/blob/main/ENCLOSURES.md), because once it's mounted, you'll have limited access to them.**
+**Only after you are done with jumpers and fuse selections you can mount the [3D printed enclosure](https://github.com/ale1800/YULC/blob/main/ENCLOSURES.md), because once it's mounted, you'll have limited access to them.**
 
 
 ## SOFTWARE CONFIGURATION
