@@ -67,3 +67,11 @@ Now there are more output terminals to reduce the overall resistance of the seri
   </p>
 </center>
 
+This version also performs really well with 12V output converting a lot of power. Here it's converting 164 W from a 24V input keeping an overall temperature < 50°C after a 4hrs long test. The output resistance is even less than the other test (11mOhm vs 12/13mOhm). Probably less ripple current in the inductor.
+
+
+<p>
+    <figcaption>24V Input -> 12V@14A Output v2.1</figcaption>
+    <img src="https://github.com/ale1800/YULC/blob/main/images/tests/12V_test.jpg">
+</p>
+
