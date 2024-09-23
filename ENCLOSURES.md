@@ -37,6 +37,7 @@ Now, with the help of the two longer screws, connect the fan holder to the two p
 </p>
 </center>
 
+Your YULC is completely assembled, you can proceed with the [software configuration](https://github.com/ale1800/YULC/tree/main?tab=readme-ov-file#software-configuration)
 
 ## BONUS
 The base has two more holes for M2 screws that can be used to design other types of support, like a din-mounting bracket, taken from [thingiverse](https://www.thingiverse.com/thing:2613804) and modified a bit.
