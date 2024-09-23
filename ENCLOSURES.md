@@ -5,7 +5,12 @@ This board does not have a "full closed" enclosure, because it needs a lot of ai
 
 ## STEP 1
 
-Mount YULC on the base and lock it in place with the help of the three smallest M2 screws
+First attach the inductor heatsink (the biggest one) as far to the right as possible, almost touching the fuse holder. Doing this way there is enough space for the regulator heatsink.
+
+> [!IMPORTANT]  
+Pay attention to place the heatsink in a way that it does not touch any other components, in particular the regulator IC one
+
+In the end you can place the two heatsinks for the mosfet and then mount YULC on the base locking it in place with the help of the three smallest M2 screws
 <center>
 <p>
 <img src="https://github.com/ale1800/YULC/blob/main/images/installation/base.jpg" width="600">
