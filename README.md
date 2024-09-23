@@ -58,7 +58,7 @@ These holders are compatible with both the standard automotive blade fuses and t
 
 5) YULC's has 10 output terminals, 5 for each channel: **2x Positive terminal, 2x GND terminal, 1x Data terminal**.     
 Each terminal can handle up to 15A, so it's heavily suggested to use both the pairs of the positive terminal and negative terminal, to decrease the overall resistance and to inject power easier later in the strips.
-Each channel is equipped with a level shifer to its data output and a high side power N-mosfet, in order to save a lot of power for longer strips in the idle state. These mosfets can also used to control simpler strips through PWM, so you can easily control different combinations of type of strips using both the channels. **Plase attach the given heatinsks to them to keep them cool when switching high currents**
+Each channel is equipped with a level shifer to its data output and a high side power N-mosfet, in order to save a lot of power for longer strips in the idle state. These mosfets can also be used to control simpler strips through PWM, so you can easily control different combinations of type of strips using both the channels. **Plase attach the given heatinsks to them to keep them cool when switching high currents**
 
 6) YULC exposes also some pins through breadboard-friendly headers. You can use these to connect buttons/microhpones/potentiometers but you can also increase the number of output channels but consider that they don't have level shifters and that you should take the power from the dedicated output terminals
    
