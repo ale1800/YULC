@@ -19,7 +19,7 @@ In the end you can place the two heatsinks for the mosfet and then mount YULC on
 
 ## STEP 2
 
-Use other 4 M2 screws to mount the fan on top of the holder and then connect it to YULC thorugh the dedicated JST connector. 
+Use other 4 M2 screws to mount the facing down fan on top of the holder and then connect it to YULC thorugh the dedicated JST connector. 
 <center>
 <p>
 <img src="https://github.com/ale1800/YULC/blob/main/images/installation/fan.jpg" height="300">
