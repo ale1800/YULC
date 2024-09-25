@@ -4,7 +4,7 @@
 
 ## Current hw rev: [2.1](https://github.com/ale1800/YULC/blob/main/HW_VERSIONS.md)
 
-## Soon available [here](https://aaelectronics-shop.com/)!
+## Pre-order [here](https://aaelectronics-shop.com/)!
 
 
 ![yulc](https://github.com/ale1800/YULC/blob/main/images/yulc.jpg)
