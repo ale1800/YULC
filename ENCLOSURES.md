@@ -40,6 +40,8 @@ Now, with the help of the two longer screws, connect the fan holder to the two p
 Your YULC is completely assembled, you can proceed with the [software configuration](https://github.com/ale1800/YULC/tree/main?tab=readme-ov-file#software-configuration)
 
 ## BONUS
+
+### DIN BRACKET
 The base has two more holes for M2 screws that can be used to design other types of support, like a din-mounting bracket, taken from [thingiverse](https://www.thingiverse.com/thing:2613804) and modified a bit.
 
 <p>
@@ -47,3 +49,16 @@ The base has two more holes for M2 screws that can be used to design other types
 </p>
 
 If you want to install something like this, you have to do that before [STEP 1](#step-1)
+
+### INMP441 MIC ADAPTER
+
+If you would like to use the INMP441 microphone breakout board in combination with the Sound Reactive usermod, you can find [here](https://github.com/ale1800/YULC/blob/main/Schematic/mic.zip) the gerber file of the tailor-made adapter.
+
+It uses the following pisn:
+
+<center>
+<p>
+<img src="https://github.com/ale1800/YULC/blob/main/images/mic/PXL_20240927_054954133.jpg" height="300">
+<img src="https://github.com/ale1800/YULC/blob/main/images/mic/PXL_20240927_055002209.jpg" height="300">
+</p>
+</center>
