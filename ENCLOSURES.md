@@ -54,7 +54,7 @@ If you want to install something like this, you have to do that before [STEP 1](
 
 If you would like to use the INMP441 microphone breakout board in combination with the Sound Reactive usermod, you can find [here](https://github.com/ale1800/YULC/blob/main/Schematic/mic.zip) the gerber file of the tailor-made adapter.
 
-It uses the following pisn:
+
 
 <center>
 <p>
@@ -62,3 +62,12 @@ It uses the following pisn:
 <img src="https://github.com/ale1800/YULC/blob/main/images/mic/PXL_20240927_055002209.jpg" height="300">
 </p>
 </center>
+
+It uses the following pins:
+| YULC Pin | INMP441 Pin |
+| --- | ---|
+| 3V | 3V |
+|  GPIO 43 (TX) | SD |
+|  GPIO 44 (RX) | WS |
+|  GND | GND, L/R |
+| GPIO 38 | SCK |
