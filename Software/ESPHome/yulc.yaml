@@ -20,6 +20,8 @@ esp32:
   framework:
     type: arduino
     version: latest
+  flash_size: 16MB
+  partitions: "/config/esphome/custom_16MB.csv"
 
 # Enable logging
 logger:
