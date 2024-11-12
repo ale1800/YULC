@@ -1,8 +1,6 @@
 substitutions:
   name: yulc
   friendly_name: yulc
-  project_name: aae.yulc
-  project_version: '1.0'
 
 esphome:
   name: ${name}
@@ -12,16 +10,14 @@ esphome:
   platformio_options:
     board_build.flash_mode: dio
   project:
-    name: ${project_name}
-    version: ${project_version}
+    name: esphome.web
+    version: dev
 
 esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
     version: latest
-  flash_size: 16MB
-  partitions: "/config/esphome/custom_16MB.csv"
 
 # Enable logging
 logger:
@@ -56,7 +52,94 @@ esp32_improv:
 # To have a "next url" for improv serial
 web_server:
 
+light:
+  - platform: fastled_clockless
+    rgb_order: GRB
+    chipset: WS2811
+    pin: GPIO1
+    num_leds: 60
+    name: "Strip 1"
+    id: strip_1_light
+    on_turn_on:
+      then:
+        - output.turn_on: gpio_47
+        - delay: 500ms
+        - light.turn_on: strip_1_light
+    on_turn_off:
+      then:
+        - light.turn_off: strip_1_light
+        - delay: 500ms
+        - output.turn_off: gpio_47
+
+  - platform: fastled_clockless
+    rgb_order: GRB
+    chipset: WS2811
+    pin: GPIO2
+    num_leds: 40
+    name: "Strip 2"
+    id: strip_2_light
+    on_turn_on:
+      then:
+        - output.turn_on: gpio_21
+        - delay: 500ms
+        - light.turn_on: strip_2_light
+    on_turn_off:
+      then:
+        - light.turn_off: strip_2_light
+        - delay: 500ms
+        - output.turn_off: gpio_21
 
 sensor:
   - platform: internal_temperature
     name: "Internal Temperature"
+    update_interval: 10s
+    id: internal_temp
+    on_value:
+      then:
+        - if:
+            condition:
+              sensor.in_range:
+                id: internal_temp
+                above: 70
+            then:
+              - light.turn_off: strip_1_light
+              - light.turn_off: strip_2_light
+              - delay: 500ms
+              - output.turn_off: gpio_47
+              - output.turn_off: gpio_21
+  - platform: adc
+    pin: GPIO7
+    name: "Fuse Voltage"
+    id: fuse_voltage
+    update_interval: 1s
+    filters:
+      - multiply: 7.6
+    on_value:
+      then:
+        - if:
+            condition:
+              lambda: 'return id(fuse_voltage).state < 1.0;'
+            then:
+              - logger.log: "BLOWN FUSE"
+              - text_sensor.template.publish:
+                  id: fuse_status
+                  state: "BLOWN FUSE"
+            else:
+              - text_sensor.template.publish:
+                  id: fuse_status
+                  state: "Fuse OK"
+
+output:
+  - platform: gpio
+    pin: 47
+    id: gpio_47
+  - platform: gpio
+    pin: 21
+    id: gpio_21
+
+
+
+text_sensor:
+  - platform: template
+    name: "Fuse Status"
+    id: fuse_status
