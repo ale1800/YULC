@@ -1,6 +1,8 @@
 substitutions:
   name: yulc
   friendly_name: yulc
+  project_name: aae.yulc
+  project_version: '1.0'
 
 esphome:
   name: ${name}
@@ -10,14 +12,18 @@ esphome:
   platformio_options:
     board_build.flash_mode: dio
   project:
-    name: esphome.web
-    version: dev
+    name: ${project_name}
+    version: ${project_version}
 
 esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
     version: latest
+
+psram:
+  mode: quad
+  speed: 80MHz
 
 # Enable logging
 logger:
@@ -70,7 +76,6 @@ light:
         - light.turn_off: strip_1_light
         - delay: 500ms
         - output.turn_off: gpio_47
-
   - platform: fastled_clockless
     rgb_order: GRB
     chipset: WS2811
