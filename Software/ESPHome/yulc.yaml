@@ -58,6 +58,9 @@ esp32_improv:
 # To have a "next url" for improv serial
 web_server:
 
+# Set up two addressable strips on pin GPIO1 and GPIO2
+# If you want to use them, adjust the rgb_order, chipset, num_leds and name.
+# On turn_on and turn_off they are already switched by the respective mosfet, ensuring no data transmission while power supply is disconnected 
 light:
   - platform: fastled_clockless
     rgb_order: GRB
@@ -94,6 +97,7 @@ light:
         - delay: 500ms
         - output.turn_off: gpio_21
 
+# Monitoring internal S3 temperaure sensor every 10s, in order to turn off both mosfet when the temperature rises above 70°C.
 sensor:
   - platform: internal_temperature
     name: "Internal Temperature"
@@ -112,6 +116,9 @@ sensor:
               - delay: 500ms
               - output.turn_off: gpio_47
               - output.turn_off: gpio_21
+              
+# Monitoring of voltage that is present on the terminal block, so likely the voltage that the strip is receiving (excluding voltage drobs at the end of the strip cable). If it drops below 1V, you'll se a "BLOWN FUSE" text in the web ui.
+# It means a short-circuit or the fuse is not installed
   - platform: adc
     pin: GPIO7
     name: "Fuse Voltage"
@@ -141,8 +148,6 @@ output:
   - platform: gpio
     pin: 21
     id: gpio_21
-
-
 
 text_sensor:
   - platform: template
