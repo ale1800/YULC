@@ -1,4 +1,4 @@
-[![Discord](https://img.shields.io/discord/1095642960365879306?label=Discord&link=https%3A%2F%2Fdiscord.com%2Finvite%2FByGBf97C)](https://discord.com/invite/ByGBf97C)
+[![Discord](https://img.shields.io/discord/1095642960365879306?label=Discord&link=https%3A%2F%2Fdiscord.com%2Finvite%2FByGBf97C)](https://discord.gg/Rk8EsMbcQk)
 
 # YULC (Yes, a USB-C Led Controller)
 
