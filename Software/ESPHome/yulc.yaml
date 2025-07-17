@@ -31,7 +31,7 @@ api:
 
 ota:
 - platform: esphome
-l
+
 improv_serial:
 
 wifi:
