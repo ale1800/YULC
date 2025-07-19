@@ -2,7 +2,7 @@ substitutions:
   name: yulc
   friendly_name: yulc
   project_name: aae.yulc
-  project_version: '1.0'
+  project_version: '1.1'
 
 esphome:
   name: ${name}
@@ -114,6 +114,7 @@ sensor:
     name: "Fuse Voltage"
     id: fuse_voltage
     update_interval: 1s
+    attenuation: 11db
     filters:
       - multiply: 7.6
     on_value:
